@@ -35,9 +35,9 @@ const NavItems = () => {
                     </ul>
                 </div>
                 <div className="navbar-end text-white">
-                    <Link to='https://drive.google.com/file/d/1ImLMZ7gZmFaYQ_IajMi256dZCGd6UHHD/view?usp=sharing' target="_blank" rel="noopener noreferrer">
+                    <a href='Resume of Sayed Hossain.pdf' download='resume.pdf' >
                     <button className="text-white font-bold">Resume</button>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>
