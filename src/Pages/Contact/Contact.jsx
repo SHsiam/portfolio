@@ -1,9 +1,23 @@
+import emailjs from '@emailjs/browser';
 import { Link } from "react-router-dom";
 import { FaFacebook } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
+import { useRef } from 'react';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_fknrk97', 'template_mj39fou', form.current, 'aEO30HzZRxPNyMgEe')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
     return (
         <div>
             <div className="hero min-h-screen  bg-gray-900 text-white">
@@ -20,7 +34,7 @@ const Contact = () => {
    </Link>
     </div>
   
-   <Link to='https://www.linkedin.com/in/sh-siam-full-stack-digital-marketer-in-bangladesh/'>
+   <Link to='https://www.linkedin.com/in/sayed-hossain-bhuiyan/'>
    <FaLinkedin className="w-6 h-8" />
    </Link>
    <Link to='https://github.com/SHsiam'>
@@ -31,17 +45,18 @@ const Contact = () => {
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-800 text-black">
       <div className="card-body font-bold ">
+        <form ref={form} onSubmit={sendEmail}>
       <div className="form-control">
           <label className="label ">
             <span className="label-text text-white text-xl ">Name</span>
           </label>
-          <input type="text" name="name" placeholder="Name" className="input input-bordered" />
+          <input type="text" name="user_name" placeholder="Name" className="input input-bordered" />
         </div>
         <div className="form-control ">
           <label className="label ">
             <span className="label-text text-white text-xl  ">Email</span>
           </label>
-          <input type="email" placeholder="Email" name="email" className="input input-bordered" />
+          <input type="email" placeholder="Email" name="user_email" className="input input-bordered" />
         </div>
 
         <div className="form-control ">
@@ -51,9 +66,11 @@ const Contact = () => {
           <textarea className="textarea textarea-bordered" placeholder="Message"></textarea>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Submit</button>
+          <input className="btn btn-primary" type="submit" value='Submit'></input>
         </div>
+        </form>
       </div>
+
     </div>
   </div>
 </div>
