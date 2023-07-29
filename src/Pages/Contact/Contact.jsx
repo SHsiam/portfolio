@@ -14,6 +14,9 @@ const Contact = () => {
     emailjs.sendForm('service_fknrk97', 'template_mj39fou', form.current, 'aEO30HzZRxPNyMgEe')
       .then((result) => {
           console.log(result.text);
+          if(result.text){
+            alert('Thank You');
+        }
       }, (error) => {
           console.log(error.text);
       });
