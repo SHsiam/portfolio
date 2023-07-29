@@ -3,9 +3,10 @@ import ProjectItems from "./ProjectItems";
 
 const Project = () => {
     return (
-        <div>
+        <div className="bg-slate-950 py-8">
             <ProjectItems></ProjectItems>
-        </div>
+        </div>  
+    
     );
 };
 

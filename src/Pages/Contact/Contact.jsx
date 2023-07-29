@@ -20,7 +20,7 @@ const Contact = () => {
   };
     return (
         <div>
-            <div className="hero min-h-screen  bg-gray-900 text-white">
+            <div className="hero min-h-screen  bg-slate-950 text-white">
   <div className="hero-content flex-col lg:flex-row-reverse ">
     <div className="text-center lg:text-left px-6 ">
       <h1 className="text-3xl font-bold">Contact</h1>
@@ -43,7 +43,7 @@ const Contact = () => {
   </div>
 </div>
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-800 text-black">
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-slate-900 text-black">
       <div className="card-body font-bold ">
         <form ref={form} onSubmit={sendEmail}>
       <div className="form-control">
@@ -61,12 +61,12 @@ const Contact = () => {
 
         <div className="form-control ">
           <label className="label ">
-            <span className="label-text text-white text-xl  ">Message</span>
+            <span className="label-text text-white text-xl">Message</span>
           </label>
           <textarea className="textarea textarea-bordered" placeholder="Message"></textarea>
         </div>
         <div className="form-control mt-6">
-          <input className="btn btn-primary" type="submit" value='Submit'></input>
+          <input className="text-white font-bold btn bg-slate-800 border-white hover:bg-slate-400 rounded" type="submit" value='Submit'></input>
         </div>
         </form>
       </div>
