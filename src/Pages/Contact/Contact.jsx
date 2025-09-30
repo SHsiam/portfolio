@@ -38,6 +38,8 @@ const Contact = () => {
             <h1 className="text-3xl font-bold">Contact</h1>
             <p className="py-2">mdshiam4@gmail.com</p>
             <p className="py-2">+8801817791056</p>
+            <p className="py-2">+447424430349</p>
+            <p className="py-2">London E12 6JA</p>
             <div>
               <div className="flex gap-2">
                 <div>

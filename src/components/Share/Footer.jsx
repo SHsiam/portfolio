@@ -1,21 +1,17 @@
-
-import logo from '../../../public/logo.png'
-
+import logo from "../../../public/logo.png";
 
 const Footer = () => {
-    return (
+  return (
+    <div>
+      <footer className="footer footer-center p-10 bg-slate-900 text-white">
         <div>
-        <footer className="footer footer-center p-10 bg-slate-900 text-white">
-<div>
-<img className='w-1/2' src={logo} alt="" />
-  <p className="font-bold text-xl">
-  Sayed Hossain Bhuiyan </p>
-  <p>Copyright © 2023 - All right reserved</p>
-</div> 
-
-</footer>
-      </div>
-    );
+          <img className="w-1/2" src={logo} alt="" />
+          <p className="font-bold text-xl">Sayed Hossain Bhuiyan </p>
+          <p>Copyright © 2025 - All right reserved</p>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default Footer;
